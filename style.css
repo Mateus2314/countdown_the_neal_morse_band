@@ -1,0 +1,169 @@
+/* RESET */
+body,
+h1 {
+  margin: 0px;
+  padding: 0px;
+  font-family: "Red Hat Text", sans-serif;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+/* Background */
+
+
+body {
+
+  background-image: 
+  url("./assets/maxresdefault.jpg"),
+  linear-gradient(to bottom, hsl(234, 17%, 12%) 10%, #30243a),
+  url("./assets/bg-stars.svg");
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center bottom;
+  min-height: 100vh;
+  font-size: 14px;
+}
+
+
+/* Titulo */
+
+h1 {
+  padding: 100px 0;
+  text-align: center;
+  text-transform: uppercase;
+  color: white;
+  letter-spacing: 0.5rem;
+  font-size: 1.25rem;
+}
+
+/* Countdown */
+
+.countdown {
+  display: flex;
+  justify-content: center;
+  gap: 25px;
+}
+
+.dias,
+.horas,
+.minutos,
+.segundos {
+  padding: 10px;
+  font-size: 4rem;
+  color: hsl(209, 93%, 63%);
+  background: hsl(236, 21%, 26%);
+  min-width: 120px;
+  text-align: center;
+  border-radius: 6px;
+  box-shadow: 0px 8px hsl(234, 17%, 12%);
+  position: relative;
+}
+
+@media (max-width: 560px) {
+  body {
+    background-size: 300%, contain, contain;
+    background-position: 85% 90%, center bottom, center bottom;
+  }
+  h1 {
+    font-size: 20rem;
+    padding: 80px 40px;
+  }
+  .countdown {
+    gap: 10px;
+  }
+  .dias,
+  .horas,
+  .minutos,
+  .segundos {
+    font-size: 10rem;
+    min-width: 200px;
+  }
+}
+
+/* Unidades */
+
+.countdown p {
+  text-align: center;
+  background-color: rgba(207, 212, 233, 0.562);
+  color: hsl(216, 60%, 40%);
+  text-transform: uppercase;
+  letter-spacing: 0.3rem;
+  font-size: 3em;
+  margin-top: 30px;
+}
+
+@media (max-width: 560px) {
+  .countdown p {
+    font-size: 0.5rem;
+    margin-top: 20px;
+  }
+}
+
+/* Opacidade */
+
+.opacidade {
+  width: 100%;
+  height: 50%;
+  position: absolute;
+  background: hsl(235, 16%, 14%);
+  opacity: 0.4;
+  top: 0;
+  left: 0;
+  z-index: 2;
+  border-bottom: 1px solid hsl(234, 17%, 12%);
+}
+
+.opacidade::before {
+  content: "";
+  display: inline-block;
+  width: 8px;
+  height: 8px;
+  background: linear-gradient(to right, transparent 50%, black 50%);
+  position: absolute;
+  border-radius: 50%;
+  bottom: -5px;
+  left: -4px;
+}
+
+.opacidade::after {
+  content: "";
+  display: inline-block;
+  width: 8px;
+  height: 8px;
+  background: linear-gradient(to right, black 50%, transparent 50%);
+  position: absolute;
+  border-radius: 50%;
+  bottom: -5px;
+  right: -4.5px;
+}
+
+/* REDES */
+
+.redes {
+  display: flex;
+  position: absolute;
+  bottom: 50px;
+  right: 0;
+  left: 0;
+  margin: 0 auto;
+  justify-content: center;
+  gap: 25px;
+  font-size: 1.75rem;
+  color: hsl(237, 18%, 59%);
+}
+
+.redes i {
+  cursor: pointer;
+}
+
+.redes i:hover {
+  color: hsl(209, 93%, 63%);
+}
+
+@media (max-width: 560px) {
+  .redes {
+    font-size: 1.25rem;
+  }
+}
